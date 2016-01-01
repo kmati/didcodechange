@@ -1,0 +1,11 @@
+{
+  "name": "didcodechange",
+  "version": "0.0.1",
+  "dependencies": {
+    "esprima": "*"
+  },
+  "engines": {
+    "node": "v4.2.3",
+    "npm": "2.14.7"
+  }
+}
