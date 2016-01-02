@@ -2,7 +2,8 @@
   "name": "didcodechange",
   "version": "0.0.1",
   "dependencies": {
-    "esprima": "*"
+    "esprima": "*",
+    "diff": "*"
   },
   "engines": {
     "node": "v4.2.3",
