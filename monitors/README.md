@@ -28,10 +28,5 @@ The file monitor sends the notifications to the other clients every time there i
 Architecture
 ============
 
-+--------------+
-| File monitor | reads files on-file-changed and sends notification to server
-+--------------+
-
-+------------------------+
-| Notification persister | persists the notification
-+------------------------+
+* File monitor: reads files on-file-changed and sends notification to server
+* Notification persister: persists the notification
