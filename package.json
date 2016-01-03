@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "esprima": "*",
-    "diff": "*"
+    "diff": "*",
+    "gaze": "*"
   },
   "engines": {
     "node": "v4.2.3",

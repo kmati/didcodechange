@@ -1,0 +1,12 @@
+{
+	"monitoring": {
+		"project-root-description": "Absolute or relative path to the project you want to monitor. In this case we've put in the relative path to the top-level didcodechange directory, i.e. we'll monitor the didcodechange project.",
+		"project-root": "../../..",
+
+		"scm-type-description": "The type of the source control system for the repository of the project being monitored. At this time, only git is supported.",
+		"scm-type": "git",
+
+		"git-executable-description": "The path to the git executable",
+		"git-executable": "git"
+	}
+}
