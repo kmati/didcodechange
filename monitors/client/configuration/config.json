@@ -1,5 +1,8 @@
 {
 	"monitoring": {
+		"username-description": "The username of the didcodechange user (i.e. the developer)",
+		"username": "kmati",
+
 		"project-root-description": "Absolute or relative path to the project you want to monitor. In this case we've put in the relative path to the top-level didcodechange directory, i.e. we'll monitor the didcodechange project.",
 		"project-root": "../../..",
 

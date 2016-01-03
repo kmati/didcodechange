@@ -52,19 +52,34 @@ var fileChecker = {
 	// callback: void function (err)
 	diffFile: function (filepath, callback) {
 		var self = this;
-		differ.diffFile(filepath, function (err, diffArr) {
+		differ.diffFile(filepath, function (err, diffArr, repositoryUrl, revisionNumber, currentFileContent) {
 			if (err) {
 				callback(err);
 				return;
 			}
 
-			self.packageDiffs(diffArr, callback);
+			self.packageDiffs(filepath, diffArr, repositoryUrl, revisionNumber, currentFileContent, callback);
 		});
 	},
 
 	// callback: void function (err)
-	packageDiffs: function (diffArr, callback) {
-		console.log("[packageDiffs] the diffArr = ",diffArr);
+	packageDiffs: function (filepath, diffArr, repositoryUrl, revisionNumber, currentFileContent, callback) {
+		var pkg = {
+			'edited-by': config.monitoring['username'],
+			'edited-at': new Date().toISOString(),
+			'path': filepath,
+			'repository-url': repositoryUrl,
+			'revision-number': revisionNumber,
+			'content': currentFileContent,
+			'diff': diffArr
+		};
+		this.uploadDiffPackage(pkg, callback);
+	},
+
+	// callback: void function (err)
+	uploadDiffPackage: function (pkg, callback) {
+		console.log("[packageDiffs] the pkg = ",pkg);
+		// TODO: Implement the upload
 		callback();
 	}
 };

@@ -1,5 +1,5 @@
 /*
- * The diffing accessor
+ * This module provides access to the configured scm differ.
  */
 var config = require('../configuration/config.json');
 var path = require('path');
@@ -9,7 +9,6 @@ var access = {
 	get: function () {
 		var differName = config.monitoring['scm-type'];
 		var modulePath = path.join(__dirname, differName + '-differ.js');
-		console.log('modulePath = ',modulePath);
 		return require(modulePath);
 	}
 };
